@@ -3,13 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:BoadaDApuntes.Models"
              x:Class="BoadaDApuntes.Views.AllNotesPage"
-             Title="Dana's Music Notes"
+             Title="Notas de Dana"
              x:DataType="models:AllNotes">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Nueva Nota" 
-                     Clicked="Add_Clicked" 
-                     IconImageSource="{FontImage Glyph='♪', Color=White, Size=22}" />
+                     Clicked="Add_Clicked" />
     </ContentPage.ToolbarItems>
 
     <Grid>
@@ -20,7 +19,7 @@
 
         <Frame Grid.Row="0" BackgroundColor="#9C27B0" HasShadow="True" CornerRadius="0" Margin="0">
             <VerticalStackLayout Spacing="5">
-                <Label Text="🎵 Mis Notas Musicales"
+                <Label Text="Mis Notas Musicales"
                        FontSize="24"
                        FontAttributes="Bold"
                        TextColor="White"
@@ -68,15 +67,12 @@
 
             <CollectionView.EmptyView>
                 <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
-                    <Label Text="🎼"
-                           FontSize="60"
-                           HorizontalOptions="Center" />
-                    <Label Text="No hay notas aún"
+                    <Label Text="No hay notas disponibles"
                            FontSize="20"
                            FontAttributes="Bold"
                            TextColor="#9C27B0"
                            HorizontalOptions="Center" />
-                    <Label Text="¡Toca el botón + para crear tu primera nota!"
+                    <Label Text="Presiona el botón Nueva Nota para crear tu primera nota"
                            FontSize="16"
                            TextColor="Gray"
                            HorizontalOptions="Center"
