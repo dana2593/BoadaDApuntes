@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BoadaDApuntes.Views.AboutPage"
+             Title="About Dana">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Margin="20">
+
+            <Frame BackgroundColor="#F3E5F5" HasShadow="True" CornerRadius="15">
+                <VerticalStackLayout Spacing="15">
+                    <Image Source="dotnet_bot.png"
+                           HeightRequest="120"
+                           HorizontalOptions="Center"
+                           SemanticProperties.Description="Dana's profile icon" />
+
+                    <Label Text="Dana Boada"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="#4A148C" />
+
+                    <Label Text="Estudiante de Ingeniería de Software"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#6A1B9A" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#E8F5E8" HasShadow="True" CornerRadius="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="🎵 Mis Hobbies"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#2E7D32" />
+
+                    <Label Text="🎻 Tocar el violín"
+                           FontSize="16"
+                           TextColor="#388E3C" />
+
+                    <Label Text="🎹 Tocar el piano"
+                           FontSize="16"
+                           TextColor="#388E3C" />
+
+                    <Label Text="🎧 Escuchar música"
+                           FontSize="16"
+                           TextColor="#388E3C" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="#FFF3E0" HasShadow="True" CornerRadius="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="📱 Sobre esta App"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#E65100" />
+
+                    <Label Text="Esta aplicación de notas fue creada con .NET MAUI para organizar mis pensamientos musicales y académicos."
+                           FontSize="16"
+                           TextColor="#F57C00"
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="🌐 Más sobre .NET MAUI"
+                    Clicked="LearnMore_Clicked"
+                    BackgroundColor="#9C27B0"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
