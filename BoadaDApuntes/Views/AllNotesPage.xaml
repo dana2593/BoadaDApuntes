@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:BoadaDApuntes.Models"
+             x:Class="BoadaDApuntes.Views.AllNotesPage"
+             Title="Dana's Music Notes"
+             x:DataType="models:AllNotes">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Nueva Nota" 
+                     Clicked="Add_Clicked" 
+                     IconImageSource="{FontImage Glyph='♪', Color=White, Size=22}" />
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="0" BackgroundColor="#9C27B0" HasShadow="True" CornerRadius="0" Margin="0">
+            <VerticalStackLayout Spacing="5">
+                <Label Text="🎵 Mis Notas Musicales"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center" />
+                <Label Text="Organiza tus ideas y pensamientos"
+                       FontSize="14"
+                       TextColor="#E1BEE7"
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <CollectionView x:Name="notesCollection"
+                        Grid.Row="1"
+                        ItemsSource="{Binding Notes}"
+                        Margin="15"
+                        SelectionMode="Single"
+                        SelectionChanged="notesCollection_SelectionChanged"
+                        BackgroundColor="Transparent">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Note">
+                    <Frame BackgroundColor="White" 
+                           HasShadow="True" 
+                           CornerRadius="12"
+                           Padding="15">
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="{Binding Text}" 
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#2E2E2E"
+                                   MaxLines="2"
+                                   LineBreakMode="TailTruncation" />
+                            <Label Text="{Binding Date, StringFormat='{0:dd/MM/yyyy HH:mm}'}" 
+                                   FontSize="12" 
+                                   TextColor="#9C27B0"
+                                   FontAttributes="Italic" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+                    <Label Text="🎼"
+                           FontSize="60"
+                           HorizontalOptions="Center" />
+                    <Label Text="No hay notas aún"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#9C27B0"
+                           HorizontalOptions="Center" />
+                    <Label Text="¡Toca el botón + para crear tu primera nota!"
+                           FontSize="16"
+                           TextColor="Gray"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+        </CollectionView>
+    </Grid>
+</ContentPage>
