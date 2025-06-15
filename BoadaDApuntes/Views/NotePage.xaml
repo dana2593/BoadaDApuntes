@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
 
         <Frame Grid.Row="0" BackgroundColor="#9C27B0" HasShadow="True" CornerRadius="0" Margin="0">
-            <Label Text="✏️ Escribe tu nota"
+            <Label Text="Escribe tu nota"
                    FontSize="20"
                    FontAttributes="Bold"
                    TextColor="White"
@@ -32,7 +32,7 @@
 
         <Grid Grid.Row="2" ColumnDefinitions="*,*" ColumnSpacing="10" Margin="15">
             <Button Grid.Column="0"
-                    Text="💾 Guardar"
+                    Text="Guardar"
                     Clicked="SaveButton_Clicked"
                     BackgroundColor="#4CAF50"
                     TextColor="White"
@@ -40,7 +40,7 @@
                     HeightRequest="50" />
 
             <Button Grid.Column="1"
-                    Text="🗑️ Eliminar"
+                    Text="Eliminar"
                     Clicked="DeleteButton_Clicked"
                     BackgroundColor="#F44336"
                     TextColor="White"

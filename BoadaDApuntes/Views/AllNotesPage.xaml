@@ -19,7 +19,7 @@
 
         <Frame Grid.Row="0" BackgroundColor="#9C27B0" HasShadow="True" CornerRadius="0" Margin="0">
             <VerticalStackLayout Spacing="5">
-                <Label Text="Mis Notas Musicales"
+                <Label Text="Mis Notas"
                        FontSize="24"
                        FontAttributes="Bold"
                        TextColor="White"
